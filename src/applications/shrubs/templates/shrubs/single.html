@@ -1,0 +1,19 @@
+{% extends "_base.html" %}
+{% block title %}Details {{ object.name }}{% endblock %}
+{% block body %}
+    <div class="single">
+        <p><a href="{% url 'shrubs:all' %}"> All shrubs</a></p>
+        <article>
+            <img src="{{ object.shrubsimage.original.url }}" alt="image" width="200rem">
+            <h1>{{ object.name }}</h1>
+            <strong>Price: {{ object.price }} BYN</strong>
+            <hr>
+            <p>Color: {{ object.color }}</p>
+            <p>Max length: {{ object.max }} sm</p>
+            <p>Description: {{ object.description }}</p>
+        </article>
+    </div>
+    </hr>
+
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}BASE{% endblock %}</title>
+    <link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
+    {% block head %}
+    {% endblock %}
+    <style>
+        body { background: url('{% static 'bg.jpg' %}');}
+    </style>
+</head>
+<body>
+<nav>
+<div>
+    <ul class="nav">
+        <li><a href="{% url 'target:index' %}">Main</a></li>
+        <li><a href="{% url 'flowers:all' %}">Flowers</a> </li>
+        <li><a href="{% url 'shrubs:all' %}">Shrubs</a> </li>
+        <li><a href="{% url 'trees:all' %}">Trees</a> </li>
+
+
+        <li><a href="{% url 'inform:index' %}">About Us</a> </li>
+        <li><a href="{% url 'contacts:index' %}">Contacts</a> </li>
+        <li><a href="{% url 'order:index' %}">Shipping and payment</a> </li>
+
+    </ul>
+
+</div>
+
+    {% block body %}BODY{% endblock %}
+
+</body>
+</html>

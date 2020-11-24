@@ -1,0 +1,26 @@
+{% extends "_base.html" %}
+{% load static %}
+{% block title %}Main page{% endblock %}
+
+{% block body %}
+
+
+<div class="all">
+<p><h1>Plant species:</h1></p>
+</div>
+<div class="all">
+   <article>
+   <p><a href="{% url 'flowers:all' %}">
+      <img src="{% static 'target/flowers.jpg' %}"
+      width="320" height="200" alt="Flowers"></a></p>
+
+      <p><a href="{% url 'shrubs:all' %}">
+      <img src="{% static 'target/shrubs.jpg' %}"
+      width="320" height="200" alt="Shrubs"></a></p>
+
+      <p><a href="{% url 'trees:all' %}">
+      <img src="{% static 'target/trees.jpg' %}"
+      width="320" height="200" alt="Trees"></a></p>
+      </article>
+</div>
+{% endblock %}

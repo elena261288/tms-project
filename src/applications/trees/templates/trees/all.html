@@ -1,0 +1,16 @@
+{% extends "_base.html" %}
+{% block title %}All trees{% endblock %}
+{% block body %}
+
+    <h1>Our trees:</h1>
+    <div class="all">
+            {% for tree in object_list %}
+                <article>
+                    <img src="{{ tree.treesimage.original.url }}" alt="image" width="200rem" height="150">
+                    <a href="{% url 'trees:single' tree.pk %}"><h2>{{ tree.name }}</h2></a>
+                    <strong>Price: {{ tree.price }} BYN</strong>
+                    <hr>
+                </article>
+            {% endfor %}
+    </div>
+{% endblock %}

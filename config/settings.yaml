@@ -1,0 +1,27 @@
+default:
+  DATABASE_URL: ""
+  ALLOWED_HOSTS: []
+  DEBUG: false
+  PORT: 0
+  AWS_ACCESS_KEY_ID: ""
+  AWS_S3_IMAGE_LOCATION: ""
+  AWS_S3_REGION_NAME: ""
+  AWS_SECRET_ACCESS_KEY: ""
+  AWS_STORAGE_BUCKET_NAME: ""
+
+development:
+  AWS_ACCESS_KEY_ID: "AKIAJVDZBKMNX7LOEXYQ"
+  AWS_S3_IMAGE_LOCATION: "images-dev"
+  AWS_S3_REGION_NAME: "eu-central-1"
+  AWS_STORAGE_BUCKET_NAME: "tms-project"
+  DEBUG: true
+  PORT: 8000
+
+heroku:
+  ALLOWED_HOSTS:
+    - "tms-project-x.herokuapp.com"
+  AWS_ACCESS_KEY_ID: "AKIAJVDZBKMNX7LOEXYQ"
+  AWS_S3_AVATARS_LOCATION: "images-heroku"
+  AWS_S3_REGION_NAME: "eu-central-1"
+  AWS_STORAGE_BUCKET_NAME: "tms-project"
+  DEBUG: true

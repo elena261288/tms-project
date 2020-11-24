@@ -1,0 +1,16 @@
+{% extends "_base.html" %}
+{% block title %}All flowers{% endblock %}
+{% block body %}
+
+    <h1>Our flowers:</h1>
+    <div class="all">
+            {% for flower in object_list %}
+                <article>
+                    <img src="{{ flower.flowersimage.original.url }}" alt="image" width="200rem" height="150">
+                    <a href="{% url 'flowers:single' flower.pk %}"><h2>{{ flower.name }}</h2></a>
+                    <strong>Price: {{ flower.price }} BYN</strong>
+                    <hr>
+                </article>
+            {% endfor %}
+    </div>
+{% endblock %}

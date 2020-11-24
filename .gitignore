@@ -1,8 +1,11 @@
 # Byte-compiled / optimized / DLL files
+**/.secrets.**
+**/db.sqlite3
+.idea/
 __pycache__/
 *.py[cod]
 *$py.class
-
+.static/
 # C extensions
 *.so
 
@@ -70,9 +73,8 @@ instance/
 
 # Sphinx documentation
 docs/_build/
-
 # PyBuilder
-target/
+#target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -102,7 +104,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/
